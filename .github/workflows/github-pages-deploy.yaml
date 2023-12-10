@@ -5,15 +5,16 @@ on:
     branches: [ main ]
 
 jobs:
-  generate:
+  deploy:
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v2
+    - name: Checkout 🛎️
+      uses: actions/checkout@v3
       
-    - name: Deploy GH page
-      uses: JamesIves/github-pages-deploy-action@3.4.2
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4
       with:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: page
+        access_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+        folder: page
