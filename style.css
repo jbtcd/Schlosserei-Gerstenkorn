@@ -10,11 +10,7 @@ body {
 }
 section {
     position: relative;
-    overflow: hidden;
-    background-position: center center;
-    background-repeat: no-repeat;
-    padding: 5rem 0;
-    min-height: 100vh;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,11 +21,25 @@ section {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 2rem;
+}
+section .container:first-child {
+    border-top: 1px solid #a3a3a3;
+    padding-top: 2rem;
 }
 .row {
     display: grid;
     grid-gap: 5rem;
     grid-template-columns: 1fr;
+}
+.row-2 {
+    grid-template-columns: 1fr 1fr;
+}
+header .row {
+    grid-template-columns: 1fr 2fr;
+}
+nav > a{
+    display: inline-block;
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .container {
@@ -82,8 +92,8 @@ a:hover {
 }
 picture,
 img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    max-height: 100px;
 }
 dt, dd {
     margin-left: 0;
@@ -92,4 +102,53 @@ dt, dd {
 dt {
     margin-right: 10px;
     vertical-align: middle;
+}
+
+section:first-of-type {
+    padding-top: calc(2rem + 40px + 3rem);
+}
+
+header {
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #3d4345;
+    z-index: 999;
+}
+
+header .container {
+    padding-top: 1rem;
+}
+
+header img {
+    width: auto;
+    max-height: calc(40px + 2rem);
+}
+
+/* Navigation */
+header ul {
+    margin: 0;
+    list-style: none;
+    padding: 1rem 0;
+    float: right;
+}
+header ul li {
+    float: left;
+}
+
+header ul li:not(:first-child) {
+    border-left: 1px solid #a3a3a3;
+}
+
+header ul li a {
+    display: block;
+    padding: .5rem 1rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+header ul li a.active {
+    background-color: #a3a3a3;
 }
