@@ -6,6 +6,7 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     background-color: #cfcfcf;
+    min-height: 101vh;
 }
 section {
     position: relative;
