@@ -4,8 +4,6 @@ body {
     font-size: 14px;
     font-weight: 300;
     line-height: 1.5;
-    color: #fff;
-    background-color: #3d4345;
     -webkit-font-smoothing: antialiased;
 }
 section {
@@ -76,14 +74,12 @@ p {
     font-size: 1.2em;
     line-height: 1.1;
     margin: 0 0 30px;
-    color: #a3a3a3;
 }
 a {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 1.2em;
     line-height: 1.1;
-    color: #fff;
     text-decoration: none;
     display: block;
 }
@@ -114,6 +110,7 @@ header {
     width: 100%;
     background-color: #3d4345;
     z-index: 999;
+    color: #fff;
 }
 
 header .container {
