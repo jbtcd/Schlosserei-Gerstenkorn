@@ -21,7 +21,7 @@ section {
     margin-right: auto;
     padding-bottom: 2rem;
 }
-section .container:first-child {
+section:not(section:first-of-type) .container:first-child {
     border-top: 1px solid #a3a3a3;
     padding-top: 2rem;
 }
