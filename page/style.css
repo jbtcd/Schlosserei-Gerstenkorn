@@ -32,6 +32,7 @@ section:not(section:first-of-type) .container:first-child {
     grid-template-columns: 1fr;
 }
 .row-2 {
+    column-gap: 2rem;
     grid-template-columns: 1fr 1fr;
 }
 header .row {
@@ -157,4 +158,9 @@ header ul li a.active {
     max-height: 20rem;
     object-fit: cover;
     object-position: bottom;
+}
+
+.row-2 img, .row-2 picture {
+    width: 100%;
+    max-height: none;
 }
