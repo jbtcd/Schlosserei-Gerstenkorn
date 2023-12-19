@@ -135,7 +135,7 @@ header .container {
 }
 
 header img {
-    width: auto;
+    max-width: 70vw;
     max-height: 4rem;
 }
 
