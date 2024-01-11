@@ -215,8 +215,10 @@ nav {
 
   .menu picture, .menu img {
     max-width: calc(100% - 4.5rem);
+    max-height: 100%;
+    height: auto;
   }
-  @media all and (min-width: 1500px) {
+  @media all and (min-width: 1000px) {
     .menu {
       margin: 0;
     }
