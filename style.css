@@ -129,45 +129,6 @@ header {
     color: #fff;
 }
 
-header .container {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-header img {
-    max-width: 70vw;
-    max-height: 4rem;
-}
-
-/* Navigation */
-header ul {
-    margin: 0;
-    list-style: none;
-    padding: 0;
-    float: right;
-}
-header ul li {
-    float: left;
-}
-
-header ul li:not(:first-child) {
-    border-left: 1px solid #a3a3a3;
-}
-
-header ul li a {
-    height: 3rem;
-    display: block;
-    padding: .5rem 1rem;
-    line-height: 3rem;
-    font-size: 1rem;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-}
-header ul li a.active {
-    background-color: #a3a3a3;
-}
-
 .home img, .home picture {
     width: 100%;
     max-height: 20rem;
@@ -179,3 +140,114 @@ header ul li a.active {
     width: 100%;
     max-height: none;
 }
+
+header .container {
+    padding: 0;
+    margin: 0 auto;
+}
+
+nav {
+    height: 6rem;
+    margin: 0;
+    overflow: hidden;
+    transition: height 0.4s;
+  }
+  nav.auto {
+    height: auto;
+  }
+  .menu {
+    margin: 0 6rem;
+    padding: 0.5rem 0;
+    height: 5rem;
+    position: relative;
+  }
+  @media all and (max-width: 500px) {
+    .menu {
+      margin: 0 2rem;
+    }
+  }
+  .menu img {
+    height: 100%;
+  }
+
+  .menu button {
+    height: 3rem;
+    width: 3.3rem;
+    border: 0.15rem solid #cfcfcf;
+    padding: 0.3rem 0;
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+  }
+  .menu button span {
+    background-color: #fff;
+    height: 0.15rem;
+    display: block;
+    margin: 0.4rem;
+  }
+  .menu button:focus {
+    outline: none;
+  }
+  .navigation {
+    background-color: #3d4345;
+  }
+  .navigation ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+  }
+  .navigation ul li {
+    border-top: 1px solid #cfcfcf;
+  }
+  .navigation ul li a {
+    display: block;
+    height: 2.5rem;
+    padding: 0.5rem 1rem;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+  }
+  .navigation ul li a.active {
+    background-color: #cfcfcf;
+  }
+
+  .menu picture, .menu img {
+    max-width: calc(100% - 4.5rem);
+  }
+  @media all and (min-width: 1500px) {
+    .menu {
+      margin: 0;
+    }
+    .container {
+      position: relative;
+      margin: 0 auto;
+    }
+    .menu > span {
+      right: inherit;
+    }
+    .menu button {
+      display: none;
+    }
+    .navigation {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 5rem;
+    }
+    .navigation ul li {
+      float: left;
+      border-top: none;
+    }
+    .navigation ul li a {
+      height: 4rem;
+      line-height: 4rem;
+      text-decoration: none;
+    }
+  
+    .navigation ul li a:hover,
+    .navigation ul li a:focus {
+      background-color: #cfcfcf;
+    }
+  }

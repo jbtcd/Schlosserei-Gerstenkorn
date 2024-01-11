@@ -69,18 +69,21 @@
     </head>
     <body>
         <header>
-            <div class="container">
-                <div class="row">
-                    <div>
-                        <a href="index.html">
-                            <picture>
-                                <source srcset="images/logo.png" type="image/png">
-                                <source srcset="images/logo.webp" type="image/webp">
-                                <img src="images/logo.png" alt="Gerstenkorn Land und Baumaschinen Schlosserei">
-                            </picture>
-                        </a>
+            <nav>
+                <div class="container">
+                    <div class="menu">
+                        <picture>
+                            <source srcset="images/logo.png" type="image/png">
+                            <source srcset="images/logo.webp" type="image/webp">
+                            <img src="images/logo.png" alt="Gerstenkorn Land und Baumaschinen Schlosserei">
+                        </picture>
+                        <button aria-label="Mobile Menü Öffnen">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
                     </div>
-                    <div>
+                    <div class="navigation">
                         <ul>
                             <li><a href="index.html">Über uns</a></li>
                             <li><a href="instandsetzung-und-wartungsarbeiten.html">Wir bieten</a></li>
@@ -88,7 +91,26 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </nav>
+            <script>
+                let button = document.querySelectorAll('nav button')[0];
+            
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+            
+                    let nav = document.querySelectorAll('nav')[0];
+            
+                    nav.classList.toggle('auto');
+                });
+            
+                window.addEventListener('resize', function (e) {
+                    let nav = document.querySelectorAll('nav')[0];
+            
+                    if (parseInt(getComputedStyle(nav).width) >= 1040) {
+                        nav.classList.remove('auto');
+                    }
+                });
+            </script>
         </header>
         <section id="ueber-uns">
             <div class="row home">
